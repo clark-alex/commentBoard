@@ -3,6 +3,7 @@ const express = require('express')
 
 const port = 3333
 const app = express()
+app.use( express.static( `${__dirname}/../build` ))
 const io = socket(app.listen(port, () => console.log(`listening on port ${port}`)))
 
 io.on('connection', socket => {
