@@ -32,7 +32,7 @@ class App extends Component {
 
   setUserId(user){
     console.log(user)
-    this.setState({user:this.state.userId})
+    this.setState({user:userId})
   }
   sendMessage(){
     this.socket.emit('message sent', {
