@@ -17,7 +17,6 @@ io.on('connection', socket => {
         console.log('data',data)
         // "data" represents incoming data from the client
         //...do things like perform logic, store data in db, join room, emit data to connected sockets, etc.
-        // data.user = this.id
         io.emit('message dispatched', data)
         socket.on('disconnect', () => {
             console.log('User Disconnected');
